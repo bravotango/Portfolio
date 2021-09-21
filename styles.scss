@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Open+Sans+Condensed:wght@300&display=swap");
 :root {
   --defaultPadding: 8px;
   --defaultMargin: 8px;
@@ -43,7 +43,7 @@ header {
       flex-direction: column;
       justify-content: center;
       /* Force background-color when viewing in Chrome dev tools for mobile devices*/
-      background-color: var(--headerBackgroundColor);
+
       h1 {
         font-size: 200%;
         letter-spacing: 5px;
@@ -61,8 +61,10 @@ header {
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        h3 {
+        h2 {
+          font-family: "Open Sans Condensed", sans-serif;
           font-weight: lighter;
+          font-size: 90%;
           min-width: 60px;
         }
         p {
@@ -79,6 +81,7 @@ header {
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
+        font-size: 125%;
         li {
           white-space: nowrap;
           margin: 0 var(--defaultMargin);
@@ -93,7 +96,18 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
+main {
+  width: 90%;
+  max-width: 1600px;
+  margin: calc(var(--defaultMargin) * 3) auto;
+  h2,
+  h3 {
+    font-family: "Fira Sans", sans-serif;
+    margin: var(--defaultMargin) 0;
+  }
+}
+
+@media screen and (min-width: 1028px) {
   header section.bio nav.desktopMenu {
     align-self: flex-start;
     ul {

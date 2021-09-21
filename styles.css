@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Open+Sans+Condensed:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -66,7 +66,6 @@ header section.bio .status {
       -ms-flex-pack: center;
           justify-content: center;
   /* Force background-color when viewing in Chrome dev tools for mobile devices*/
-  background-color: var(--headerBackgroundColor);
 }
 
 header section.bio .status h1 {
@@ -97,8 +96,10 @@ header section.bio .status .current div {
       flex-wrap: wrap;
 }
 
-header section.bio .status .current div h3 {
+header section.bio .status .current div h2 {
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: lighter;
+  font-size: 90%;
   min-width: 60px;
 }
 
@@ -122,6 +123,7 @@ header section.bio nav.desktopMenu ul {
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-size: 125%;
 }
 
 header section.bio nav.desktopMenu ul li {
@@ -135,7 +137,19 @@ header section.bio nav.desktopMenu ul li a {
   color: var(--linkColor);
 }
 
-@media screen and (min-width: 768px) {
+main {
+  width: 90%;
+  max-width: 1600px;
+  margin: calc(var(--defaultMargin) * 3) auto;
+}
+
+main h2,
+main h3 {
+  font-family: "Fira Sans", sans-serif;
+  margin: var(--defaultMargin) 0;
+}
+
+@media screen and (min-width: 1028px) {
   header section.bio nav.desktopMenu {
     -ms-flex-item-align: start;
         align-self: flex-start;
