@@ -1,7 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+:root {
+  --defaultPadding: 8px;
+  --defaultMargin: 8px;
+  --headerBackgroundColor: rgb(100, 100, 100);
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans Condensed", sans-serif;
+  background-color: lightgray;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--headerBackgroundColor);
+  color: lightgray;
+}
+
+header section.bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header section.bio .photo img {
+  width: 150px;
+  margin: var(--defaultMargin);
+  border-radius: 50%;
+  margin-right: var(--defaultPadding);
+}
+
+header section.bio .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header section.bio .status h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 200%;
+  letter-spacing: 5px;
+}
+
+header section.bio .status h1 .first {
+  color: lightgray;
+}
+
+header section.bio .status h1 .last {
+  color: white;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=styles.css.map */
