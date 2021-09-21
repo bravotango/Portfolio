@@ -9,35 +9,42 @@
   --defaultPadding: 8px;
   --defaultMargin: 8px;
   --headerBackgroundColor: rgb(100, 100, 100);
+  --linkColor: lightblue;
 }
 
 body {
   font-size: 16px;
   font-family: "Open Sans Condensed", sans-serif;
   background-color: lightgray;
+  min-width: 300px;
 }
 
 header {
   display: flex;
   background-color: var(--headerBackgroundColor);
   color: lightgray;
+  padding: var(--defaultPadding) 0;
   section.bio {
     display: flex;
+    flex-direction: flex-start;
+    align-items: center;
     .photo {
+      width: 25%;
       img {
-        width: 150px;
+        max-width: 80%;
         margin: var(--defaultMargin);
         border-radius: 50%;
         margin-right: var(--defaultPadding);
       }
     }
     .status {
+      width: 75%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      /* Force background-color when viewing in Chrome dev tools for mobile devices*/
+      background-color: var(--headerBackgroundColor);
       h1 {
-        align-self: flex-start;
         font-size: 200%;
         letter-spacing: 5px;
         .first {
@@ -48,6 +55,60 @@ header {
           text-transform: uppercase;
         }
       }
+
+      .current div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        h3 {
+          font-weight: lighter;
+          min-width: 60px;
+        }
+        p {
+          font-weight: bold;
+          color: white;
+        }
+      }
     }
+    nav.desktopMenu {
+      ul {
+        margin: var(--defaultMargin);
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        li {
+          white-space: nowrap;
+          margin: 0 var(--defaultMargin);
+          a {
+            padding: 0 2%;
+            text-decoration: none;
+            color: var(--linkColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header section.bio nav.desktopMenu {
+    align-self: flex-start;
+    ul {
+      flex-direction: row;
+      font-size: 200%;
+      li a {
+        &:hover {
+          border-bottom: 5px solid var(--linkColor);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 10px;
   }
 }

@@ -10,12 +10,14 @@
   --defaultPadding: 8px;
   --defaultMargin: 8px;
   --headerBackgroundColor: rgb(100, 100, 100);
+  --linkColor: lightblue;
 }
 
 body {
   font-size: 16px;
   font-family: "Open Sans Condensed", sans-serif;
   background-color: lightgray;
+  min-width: 300px;
 }
 
 header {
@@ -24,22 +26,35 @@ header {
   display: flex;
   background-color: var(--headerBackgroundColor);
   color: lightgray;
+  padding: var(--defaultPadding) 0;
 }
 
 header section.bio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header section.bio .photo {
+  width: 25%;
 }
 
 header section.bio .photo img {
-  width: 150px;
+  max-width: 80%;
   margin: var(--defaultMargin);
   border-radius: 50%;
   margin-right: var(--defaultPadding);
 }
 
 header section.bio .status {
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,17 +62,14 @@ header section.bio .status {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  /* Force background-color when viewing in Chrome dev tools for mobile devices*/
+  background-color: var(--headerBackgroundColor);
 }
 
 header section.bio .status h1 {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   font-size: 200%;
   letter-spacing: 5px;
 }
@@ -69,5 +81,80 @@ header section.bio .status h1 .first {
 header section.bio .status h1 .last {
   color: white;
   text-transform: uppercase;
+}
+
+header section.bio .status .current div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header section.bio .status .current div h3 {
+  font-weight: lighter;
+  min-width: 60px;
+}
+
+header section.bio .status .current div p {
+  font-weight: bold;
+  color: white;
+}
+
+header section.bio nav.desktopMenu ul {
+  margin: var(--defaultMargin);
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header section.bio nav.desktopMenu ul li {
+  white-space: nowrap;
+  margin: 0 var(--defaultMargin);
+}
+
+header section.bio nav.desktopMenu ul li a {
+  padding: 0 2%;
+  text-decoration: none;
+  color: var(--linkColor);
+}
+
+@media screen and (min-width: 768px) {
+  header section.bio nav.desktopMenu {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  header section.bio nav.desktopMenu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 200%;
+  }
+  header section.bio nav.desktopMenu ul li a:hover {
+    border-bottom: 5px solid var(--linkColor);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
