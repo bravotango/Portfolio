@@ -19,6 +19,7 @@ body {
   background-color: lightgray;
   min-width: 300px;
   margin-bottom: 100%;
+  background: url(./images/bg.jpg);
 }
 
 header {
