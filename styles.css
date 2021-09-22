@@ -18,6 +18,7 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
   background-color: lightgray;
   min-width: 300px;
+  margin-bottom: 100%;
 }
 
 header {
@@ -143,10 +144,28 @@ main {
   margin: calc(var(--defaultMargin) * 3) auto;
 }
 
-main h2,
-main h3 {
+main h2 {
   font-family: "Fira Sans", sans-serif;
-  margin: var(--defaultMargin) 0;
+}
+
+main p,
+main address,
+main a {
+  line-height: 1.5em;
+  margin: calc(var(--defaultMargin) * 2) 0;
+}
+
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: calc(var(--defaultMargin) * 3);
+}
+
+main section > div {
+  min-width: 35%;
+  padding-right: var(--defaultPadding);
+  margin-right: var(--defaultMargin);
 }
 
 @media screen and (min-width: 1028px) {
@@ -163,6 +182,14 @@ main h3 {
   }
   header section.bio nav.desktopMenu ul li a:hover {
     border-bottom: 5px solid var(--linkColor);
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main section > div {
+    min-width: 20%;
   }
 }
 

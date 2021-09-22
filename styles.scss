@@ -17,6 +17,7 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
   background-color: lightgray;
   min-width: 300px;
+  margin-bottom: 100%;
 }
 
 header {
@@ -100,10 +101,25 @@ main {
   width: 90%;
   max-width: 1600px;
   margin: calc(var(--defaultMargin) * 3) auto;
-  h2,
-  h3 {
+  h2 {
     font-family: "Fira Sans", sans-serif;
-    margin: var(--defaultMargin) 0;
+  }
+
+  p,
+  address,
+  a {
+    line-height: 1.5em;
+    margin: calc(var(--defaultMargin) * 2) 0;
+  }
+
+  section {
+    display: flex;
+    margin-top: calc(var(--defaultMargin) * 3);
+    > div {
+      min-width: 35%;
+      padding-right: var(--defaultPadding);
+      margin-right: var(--defaultMargin);
+    }
   }
 }
 
@@ -118,6 +134,13 @@ main {
           border-bottom: 5px solid var(--linkColor);
         }
       }
+    }
+  }
+  main section {
+    display: flex;
+
+    > div {
+      min-width: 20%;
     }
   }
 }
