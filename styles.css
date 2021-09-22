@@ -150,8 +150,7 @@ main h2 {
 }
 
 main p,
-main address,
-main a {
+main address {
   line-height: 1.5em;
   margin: calc(var(--defaultMargin) * 2) 0;
 }
@@ -167,6 +166,48 @@ main section > div {
   min-width: 35%;
   padding-right: var(--defaultPadding);
   margin-right: var(--defaultMargin);
+}
+
+main section div.articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section div.articles article {
+  min-width: 300px;
+  width: 48%;
+  border: 1px dashed #000;
+  border-radius: 8px;
+}
+
+main section div.articles article h3 {
+  text-align: center;
+  background-color: var(--headerBackgroundColor);
+  width: 50%;
+  font-size: 150%;
+  min-height: 40px;
+  margin: calc(var(--defaultMargin) * -2.5) auto;
+  color: white;
+  border: 1px dashed white;
+}
+
+main section div.articles article p {
+  margin: var(--defaultMargin);
+}
+
+main section div.articles article:nth-child(1) {
+  width: 100%;
+  min-height: 300px;
+}
+
+main section div.articles article:nth-child(n + 2) {
+  margin-top: calc(var(--defaultMargin) * 5);
 }
 
 @media screen and (min-width: 1028px) {
@@ -191,6 +232,12 @@ main section > div {
   }
   main section > div {
     min-width: 20%;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  main section div.articles article {
+    width: 100%;
   }
 }
 

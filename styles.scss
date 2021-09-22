@@ -108,8 +108,7 @@ main {
   }
 
   p,
-  address,
-  a {
+  address {
     line-height: 1.5em;
     margin: calc(var(--defaultMargin) * 2) 0;
   }
@@ -121,6 +120,37 @@ main {
       min-width: 35%;
       padding-right: var(--defaultPadding);
       margin-right: var(--defaultMargin);
+    }
+    div.articles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      article {
+        min-width: 300px;
+        width: 48%;
+        border: 1px dashed #000;
+        border-radius: 8px;
+        h3 {
+          text-align: center;
+          background-color: var(--headerBackgroundColor);
+          width: 50%;
+          font-size: 150%;
+          min-height: 40px;
+          margin: calc(var(--defaultMargin) * -2.5) auto;
+          color: white;
+          border: 1px dashed white;
+        }
+        p {
+          margin: var(--defaultMargin);
+        }
+      }
+      article:nth-child(1) {
+        width: 100%;
+        min-height: 300px;
+      }
+      article:nth-child(n + 2) {
+        margin-top: calc(var(--defaultMargin) * 5);
+      }
     }
   }
 }
@@ -146,6 +176,13 @@ main {
     }
   }
 }
+
+@media screen and (max-width: 1028px) {
+  main section div.articles article {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   body {
     font-size: 10px;
