@@ -9,7 +9,7 @@
 :root {
   --defaultPadding: 8px;
   --defaultMargin: 8px;
-  --headerBackgroundColor: rgb(100, 100, 100);
+  --headerBackgroundColor: rgba(0, 0, 0, 0.85);
   --linkColor: lightblue;
 }
 
