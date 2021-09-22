@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Fredericka+the+Great&family=Open+Sans+Condensed:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +67,6 @@ header section.bio .status {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* Force background-color when viewing in Chrome dev tools for mobile devices*/
 }
 
 header section.bio .status h1 {
@@ -180,10 +179,15 @@ main section div.articles {
 }
 
 main section div.articles article {
-  min-width: 300px;
+  position: relative;
+  min-width: 280px;
+  min-height: 400px;
   width: 48%;
-  border: 1px dashed #000;
+  border: 1px dashed black;
   border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 main section div.articles article h3 {
@@ -194,16 +198,42 @@ main section div.articles article h3 {
   min-height: 40px;
   margin: calc(var(--defaultMargin) * -2.5) auto;
   color: white;
-  border: 1px dashed white;
+  border: 1px dotted white;
 }
 
 main section div.articles article p {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 50px;
+  width: 50%;
   margin: var(--defaultMargin);
+  padding: var(--defaultPadding);
+}
+
+main section div.articles article p strong {
+  display: block;
+  text-transform: uppercase;
+  font-family: "Fredericka the Great", cursive;
+  color: #a1d0ff;
+}
+
+main section div.articles article p a {
+  color: var(--linkColor);
 }
 
 main section div.articles article:nth-child(1) {
   width: 100%;
-  min-height: 300px;
+  min-height: 600px;
+  background-image: url(./images/walk.jpg);
+}
+
+main section div.articles article:nth-child(2) {
+  background-image: url(./images/bg-ana.jpg);
+}
+
+main section div.articles article:nth-child(3) {
+  background-image: url(./images/joker.png);
 }
 
 main section div.articles article:nth-child(n + 2) {
