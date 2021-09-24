@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio of Software Development Engineer Brian Tracy</title>
   </head>
-  <body>
+  <body id="top">
     <header>
       <section class="bio">
         <div class="photo">
@@ -27,10 +27,6 @@
               <h2>Team</h2>
               <p>Microsoft</p>
             </div>
-            <div>
-              <h2>Status</h2>
-              <p>Open to new opportunities</p>
-            </div>
           </div>
         </div>
         <nav class="desktopMenu">
@@ -44,90 +40,93 @@
             <li>
               <a href="#contactMe">Contact Me</a>
             </li>
-            <li>
-              <a href="#resume">Resume</a>
-            </li>
           </ul>
         </nav>
       </section>
     </header>
 
     <main>
-      <section>
-        <div><h2 id="aboutMe">About Me</h2></div>
+      <section id="aboutMe">
+        <div><h2>About Me</h2></div>
         <div>
-          <h3>I design & code</h3>
-          <p>I love learning.</p>
-          <p>I am a team player with 20 years of web development experience.</p>
-
+          <h3>I Design & Code</h3>
           <p>
             I am a visual person who has passion and experience creating designs
             and developing code.
           </p>
-
+          <p>I love learning. I have 20 years web development experience.</p>
           <p>
-            I love learning and creating designs with Figma & developing within
-            JavaScript frameworks and libraries. Most recently, I develop in
-            TypeScript while working in Angular & React.
+            My focus when creating solutions is simplicity. I like the challenge
+            of displaying content in a simple understandable way.
           </p>
 
-          <h3>What Interests Me</h3>
-          <p>
-            I like building creative projects that promote health, are
-            educational, or involve sports. I like the challenge of displaying
-            data in a simple understandable way. I enjoy design. I like creating
-            art with pencil, paint, and computers.
-          </p>
+          <p></p>
 
-          <p>
-            My roles have always involved interface responsibilities. I have
-            expertise in HTML, CSS, and JavaScript. My focus when developing
-            solutions is simplicity.
-          </p>
+          <p>I have expertise in HTML, CSS, JavaScript, and TypeScript.</p>
+
+          <h4>I Design Prototypes & Mock-Ups in:</h4>
+          <ul>
+            <li>Figma</li>
+            <li>AdobeXD</li>
+          </ul>
+          <h4>I Develop HTML, CSS, JavaScript & TypeScript in:</h4>
+          <ul>
+            <li>HTML 5</li>
+            <li>CSS3</li>
+            <li>SCSS</li>
+            <li>ES6 JavaScript</li>
+            <li>Angular</li>
+            <li>React</li>
+          </ul>
 
           <h3>How I Play</h3>
           <p>
             I love to laugh. I love being outside. I love playing soccer or
             riding motorcycles with my 2 wonderful children. I love yard work, I
-            practice yoga, and during summers we pull our travel trailer on
+            practice yoga, and during summers we pull our travel-trailer on
             adventures around the Pacific Northwest. Our home is in Bothell,
-            surrounded by trees and protected by Hazel, our beautiful
+            surrounded by trees and protected by Hazel, our beautifully-loyal
             husky-shepherd.
           </p>
         </div>
       </section>
 
-      <section>
-        <div><h2 id="work">Work</h2></div>
+      <section id="work">
+        <div><h2>Work</h2></div>
         <div class="articles">
-          <article>
+          <article id="react">
             <h3>React</h3>
             <p>
               <strong>React Redux - Walk Sequence</strong> 8 slides used in
               conjunction with React and Redux to simulate a walk sequence.
-              <a href="https://www.btgraphix.com/walk/" target="blank">Visit</a>
-            </p>
-          </article>
-          <article>
-            <h3>Angular</h3>
-            <p>
-              <strong>Angular - Tour of Heroes</strong>
-              Based on "Angular - Tutorial: Tour of Heroes", added
-              MaterializeCSS, swapped out tutorial characters for characters of
-              Overwatch.
-              <a
-                href="https://www.btgraphix.com/overwatch/#/dashboard"
-                target="blank"
+              <a href="https://www.btgraphix.com/walk/" target="_blank"
                 >Visit</a
               >
             </p>
           </article>
-          <article>
+          <article id="angular">
+            <h3>Angular</h3>
+            <p>
+              <strong>Angular - Tour of Heroes</strong>
+              Based on
+              <a href="https://angular.io/tutorial" target="_blank"
+                >Angular - Tutorial: Tour of Heroes</a
+              >, added MaterializeCSS, swapped out tutorial characters for
+              characters of Overwatch.
+              <a
+                href="https://www.btgraphix.com/overwatch/#/dashboard"
+                target="_blank"
+              >
+                Visit
+              </a>
+            </p>
+          </article>
+          <article id="api">
             <h3>API</h3>
             <p>
               <strong>API - Joker</strong> Fetch and display jokes from
               https://icanhazdadjoke.com/slack.
-              <a href="https://www.btgraphix.com/joker/" target="blank"
+              <a href="https://www.btgraphix.com/joker/" target="_blank"
                 >Visit</a
               >
             </p>
@@ -135,13 +134,12 @@
         </div>
       </section>
 
-      <section>
-        <div><h2 id="contactMe">Contact Me</h2></div>
+      <section id="contactMe">
+        <div><h2>Contact Me</h2></div>
         <div>
           <h3>Address</h3>
           <address>
             Brian Tracy<br />
-            914 217th ST SW<br />
             Bothell, WA 98021
           </address>
 
@@ -156,14 +154,14 @@
           <p><a href="tel:425-773-2818">425.773.2818</a></p>
         </div>
       </section>
-
-      <section>
-        <div><h2 id="resume">Resume</h2></div>
-        <div>
-          <h3>Download</h3>
-          <p><a href="./brian-tracy-resume.pdf">resume</a></p>
-        </div>
-      </section>
     </main>
+    <footer>
+      <a href="https:www.btgraphix.com" target="_blank">BTgraphix.com</a>
+      <script>
+        var today = new Date();
+        document.write(today.getFullYear());
+      </script>
+      <a class="up" href="#top">back to top</a>
+    </footer>
   </body>
 </html>
