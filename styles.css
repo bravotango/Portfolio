@@ -9,6 +9,8 @@
 
 :root {
   --font-size-default: 18px;
+  --font-size-smallest: calc(var(--font-size-default) * 0.6);
+  --font-size-smaller: calc(var(--font-size-default) * 0.75);
   --font-size-small: calc(var(--font-size-default) * 0.9);
   --font-size-large: calc(var(--font-size-default) * 1.25);
   --font-size-larger: calc(var(--font-size-default) * 1.5);
@@ -18,14 +20,14 @@
   --margin-default: 8px;
   --margin-small: calc(var(--margin-default) / 2);
   --margin-medium: calc(var(--margin-default) * 2);
-  --margin-large: calc(var(--margin-default) * 3);
+  --margin-large: calc(var(--margin-default) * 3.5);
   --margin-larger: calc(var(--margin-default) * 6);
   --primary-background-color: rgba(0, 0, 0, 0.85);
   --link-color: lightblue;
-  --link-external: "❐";
-  --link-phone: "☎";
-  --link-top-of-page: "⏶";
-  --link-email: "✉";
+  --link-external: "↗️";
+  --link-phone: "☎️";
+  --link-top-of-page: "🔝";
+  --link-email: "📬";
 }
 
 body {
@@ -38,7 +40,7 @@ body {
 }
 
 a[target="_blank"] {
-  margin-right: var(--margin-medium);
+  margin-right: var(--margin-large);
 }
 
 a[target="_blank"]::after {
@@ -140,7 +142,7 @@ header section.bio .status .current div {
 header section.bio .status .current div h2 {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: lighter;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-smaller);
   min-width: 60px;
 }
 
@@ -149,7 +151,7 @@ header section.bio .status .current div p {
   color: white;
 }
 
-header section.bio nav.desktopMenu ul {
+header section.bio nav ul {
   margin: var(--margin-default);
   list-style-type: none;
   display: -webkit-box;
@@ -167,12 +169,12 @@ header section.bio nav.desktopMenu ul {
   font-size: var(--font-size-large);
 }
 
-header section.bio nav.desktopMenu ul li {
+header section.bio nav ul li {
   white-space: nowrap;
   margin: 0 var(--margin-default);
 }
 
-header section.bio nav.desktopMenu ul li a {
+header section.bio nav ul li a {
   padding: 0 2%;
   text-decoration: none;
   color: var(--link-color);
@@ -218,7 +220,9 @@ main section#aboutMe ul {
 }
 
 main section#aboutMe ul li {
-  margin-right: var(--margin-larger);
+  margin-right: var(--margin-largest);
+  white-space: nowrap;
+  min-width: 150px;
 }
 
 main section div {
@@ -250,6 +254,7 @@ main section div.articles article {
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
+  cursor: pointer;
 }
 
 main section div.articles article h3 {
@@ -334,18 +339,18 @@ footer a.up::after {
 }
 
 @media screen and (min-width: 1028px) {
-  header section.bio nav.desktopMenu {
+  header section.bio nav {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
-  header section.bio nav.desktopMenu ul {
+  header section.bio nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     font-size: var(--font-size-larger);
   }
-  header section.bio nav.desktopMenu ul li a:hover {
+  header section.bio nav ul li a:hover {
     border-bottom: 5px solid var(--link-color);
   }
   main section {
@@ -367,12 +372,26 @@ footer a.up::after {
   }
 }
 
+@media screen and (max-width: 768px) {
+  main section#aboutMe ul {
+    margin: var(--margin-small) var(--margin-large);
+  }
+}
+
 @media screen and (max-width: 480px) {
   body {
-    font-size: 10px;
+    font-size: var(--font-size-smallest);
   }
-  body main section.bio .status .current div h2 {
-    min-width: 80px;
+  body header section.bio nav ul {
+    font-size: var(--font-size-smallest);
+  }
+  body header section.bio .status h1 {
+    font-size: var(--font-size-smaller);
+  }
+  body header section.bio .status .current div h2,
+  body header section.bio .status .current div p {
+    font-size: var(--font-size-smallest);
+    min-width: 36px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
