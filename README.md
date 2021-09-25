@@ -32,7 +32,7 @@ This site applies the core CSS skills learned: flexbox, media queries and CSS va
 
 ### Pseudo elements
 
-Pseudo elements are used to display appropriate symbol images next to the following anchors elements: email, phone number, external sites, and top of page
+Pseudo elements are used to display appropriate symbol images next to the following anchors elements: email, phone number, external sites, and top of page.
 
 ### Responsive Design
 
@@ -40,7 +40,7 @@ This portfolio supports responsive design from mobile, tablet, to large desktop 
 
 #### Breakpoints
 
-This design uses the following media query breakpoints: 1028px, 768px, 480px
+This design uses the following media query breakpoints: 1028px, 768px, 480px.
 
 #### Mobile View
 
@@ -56,7 +56,7 @@ Main content area is capped at 1600px wide and centered for nice desktop reading
 
 ## JavaScript
 
-JavaScript is used to dynamically display current year in the footer
+JavaScript is used to dynamically display current year in the footer.
 
 JavaScript is also used to satisfy the acceptance criteria to click the work example image to open the deployed example. I liked having the example images as backgrounds, so I leveraged "onclick" on the image container to open the deployed example.
 
