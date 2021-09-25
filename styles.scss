@@ -34,10 +34,10 @@
   --link-color: lightblue;
 
   // icons
-  --link-external: "↗️";
-  --link-phone: "☎️";
-  --link-top-of-page: "🔝";
-  --link-email: "📬";
+  --link-external: "❐";
+  --link-phone: "📱";
+  --link-top-of-page: "▲";
+  --link-email: "✉️";
 }
 
 body {
@@ -77,17 +77,17 @@ a {
 
 // header styles
 header {
-  display: flex;
   background-color: var(--primary-background-color);
   color: lightgray;
   padding: var(--padding-default) 0;
-  section.bio {
+  section {
     display: flex;
     flex-direction: flex-start;
     align-items: center;
     .photo {
       width: 25%;
       min-width: 75px;
+      max-width: 150px;
       img {
         max-width: 80%;
         margin: var(--margin-default);
@@ -137,7 +137,7 @@ header {
     //navigation
     nav {
       ul {
-        margin: var(--margin-default);
+        margin: var(--margin-default) var(--margin-larger) 0 var(--margin-small);
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -247,6 +247,8 @@ main {
           }
         }
       }
+
+      // work images
       article#react {
         width: 100%;
         min-height: 600px;
@@ -258,6 +260,7 @@ main {
       article#api {
         background-image: url(./images/joker.png);
       }
+      // increase the margin top for the articles after the 1st article
       article:nth-child(n + 2) {
         margin-top: var(--margin-larger);
       }
@@ -295,7 +298,7 @@ footer {
 // media queries - screen// header styles
 // desktop
 @media screen and (min-width: 1028px) {
-  header section.bio {
+  header section {
     nav {
       align-self: flex-start;
       ul {
@@ -339,9 +342,10 @@ footer {
 @media screen and (max-width: 480px) {
   body {
     font-size: var(--font-size-smallest);
-    header section.bio {
+    header section {
       nav ul {
         font-size: var(--font-size-smallest);
+        margin: var(--margin-small);
       }
       .status {
         h1 {

@@ -32,7 +32,7 @@ This site applies the core CSS skills learned: flexbox, media queries and CSS va
 
 ### Pseudo elements
 
-Pseudo elments are used to display appropriate symbol images next to the following anchors elements: email, phone number, external sites, and top of page
+Pseudo elements are used to display appropriate symbol images next to the following anchors elements: email, phone number, external sites, and top of page
 
 ### Responsive Design
 

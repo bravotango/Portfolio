@@ -24,10 +24,10 @@
   --margin-larger: calc(var(--margin-default) * 6);
   --primary-background-color: rgba(0, 0, 0, 0.85);
   --link-color: lightblue;
-  --link-external: "↗️";
-  --link-phone: "☎️";
-  --link-top-of-page: "🔝";
-  --link-email: "📬";
+  --link-external: "❐";
+  --link-phone: "📱";
+  --link-top-of-page: "▲";
+  --link-email: "✉️";
 }
 
 body {
@@ -63,15 +63,12 @@ a[href^="mailto:"]::before {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: var(--primary-background-color);
   color: lightgray;
   padding: var(--padding-default) 0;
 }
 
-header section.bio {
+header section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,19 +81,20 @@ header section.bio {
           align-items: center;
 }
 
-header section.bio .photo {
+header section .photo {
   width: 25%;
   min-width: 75px;
+  max-width: 150px;
 }
 
-header section.bio .photo img {
+header section .photo img {
   max-width: 80%;
   margin: var(--margin-default);
   border-radius: 50%;
   margin-right: var(--padding-default);
 }
 
-header section.bio .status {
+header section .status {
   width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,22 +108,22 @@ header section.bio .status {
           justify-content: center;
 }
 
-header section.bio .status h1 {
+header section .status h1 {
   font-size: var(--font-size-largest);
   letter-spacing: 5px;
   margin-bottom: var(--margin-default);
 }
 
-header section.bio .status h1 .first {
+header section .status h1 .first {
   color: lightgray;
 }
 
-header section.bio .status h1 .last {
+header section .status h1 .last {
   color: white;
   text-transform: uppercase;
 }
 
-header section.bio .status .current div {
+header section .status .current div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,20 +137,20 @@ header section.bio .status .current div {
       flex-wrap: wrap;
 }
 
-header section.bio .status .current div h2 {
+header section .status .current div h2 {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: lighter;
   font-size: var(--font-size-smaller);
   min-width: 60px;
 }
 
-header section.bio .status .current div p {
+header section .status .current div p {
   font-weight: bold;
   color: white;
 }
 
-header section.bio nav ul {
-  margin: var(--margin-default);
+header section nav ul {
+  margin: var(--margin-default) var(--margin-larger) 0 var(--margin-small);
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,12 +167,12 @@ header section.bio nav ul {
   font-size: var(--font-size-large);
 }
 
-header section.bio nav ul li {
+header section nav ul li {
   white-space: nowrap;
   margin: 0 var(--margin-default);
 }
 
-header section.bio nav ul li a {
+header section nav ul li a {
   padding: 0 2%;
   text-decoration: none;
   color: var(--link-color);
@@ -339,18 +337,18 @@ footer a.up::after {
 }
 
 @media screen and (min-width: 1028px) {
-  header section.bio nav {
+  header section nav {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
-  header section.bio nav ul {
+  header section nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     font-size: var(--font-size-larger);
   }
-  header section.bio nav ul li a:hover {
+  header section nav ul li a:hover {
     border-bottom: 5px solid var(--link-color);
   }
   main section {
@@ -382,14 +380,15 @@ footer a.up::after {
   body {
     font-size: var(--font-size-smallest);
   }
-  body header section.bio nav ul {
+  body header section nav ul {
     font-size: var(--font-size-smallest);
+    margin: var(--margin-small);
   }
-  body header section.bio .status h1 {
+  body header section .status h1 {
     font-size: var(--font-size-smaller);
   }
-  body header section.bio .status .current div h2,
-  body header section.bio .status .current div p {
+  body header section .status .current div h2,
+  body header section .status .current div p {
     font-size: var(--font-size-smallest);
     min-width: 36px;
   }
