@@ -249,20 +249,24 @@ main {
       }
 
       // work images
-      article#react {
-        width: 100%;
-        min-height: 600px;
-        background-image: url(./images/walk.jpg);
-      }
-      article#angular {
-        background-image: url(./images/bg-ana.jpg);
-      }
-      article#api {
-        background-image: url(./images/joker.png);
-      }
-      // increase the margin top for the articles after the 1st article
-      article:nth-child(n + 2) {
-        margin-top: var(--margin-larger);
+      article {
+        &.primary {
+          width: 100%;
+          min-height: 600px;
+        }
+        &#react {
+          background-image: url(./images/walk.jpg);
+        }
+        &#angular {
+          background-image: url(./images/bg-ana.jpg);
+        }
+        &#api {
+          background-image: url(./images/joker.png);
+        }
+        // increase the margin top for the articles after the 1st article
+        &:nth-child(n + 2) {
+          margin-top: var(--margin-larger);
+        }
       }
     }
   }
