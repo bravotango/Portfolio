@@ -252,7 +252,6 @@ main section div.articles article {
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  cursor: pointer;
 }
 
 main section div.articles article h3 {
@@ -269,7 +268,7 @@ main section div.articles article h3 {
 
 main section div.articles article p {
   color: white;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
   bottom: 50px;
   width: 50%;
@@ -291,6 +290,10 @@ main section div.articles article p a {
 main section div.articles article.primary {
   width: 100%;
   min-height: 600px;
+}
+
+main section div.articles article#project-1 {
+  background-image: url(./images/movie.jpg);
 }
 
 main section div.articles article#react {
