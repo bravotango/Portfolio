@@ -216,7 +216,6 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         background-color: white;
-        cursor: pointer;
         h3 {
           text-align: center;
           background-color: var(--primary-background-color);
@@ -230,7 +229,7 @@ main {
         }
         p {
           color: white;
-          background-color: rgba(0, 0, 0, 0.65);
+          background-color: rgba(0, 0, 0, 0.85);
           position: absolute;
           bottom: 50px;
           width: 50%;
@@ -248,11 +247,14 @@ main {
         }
       }
 
-      // work images
+      // project images
       article {
         &.primary {
           width: 100%;
           min-height: 600px;
+        }
+        &#project-1 {
+          background-image: url(./images/movie.jpg);
         }
         &#react {
           background-image: url(./images/walk.jpg);
