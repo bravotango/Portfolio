@@ -283,6 +283,22 @@ main section div.articles article p strong {
   color: #a1d0ff;
 }
 
+main section div.articles article p.small {
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+}
+
+main section div.articles article p.small strong {
+  display: block;
+  font-size: 80%;
+  white-space: pre;
+}
+
+main section div.articles article p.small strong:after {
+  content: ": ";
+}
+
 main section div.articles article p a {
   color: var(--link-color);
 }
@@ -294,6 +310,14 @@ main section div.articles article.primary {
 
 main section div.articles article#project-1 {
   background-image: url(./images/movie.jpg);
+}
+
+main section div.articles article#weather {
+  background-image: url(./images/weather.jpg);
+}
+
+main section div.articles article#workday {
+  background-image: url(./images/workday.png);
 }
 
 main section div.articles article#react {
