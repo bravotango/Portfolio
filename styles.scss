@@ -235,11 +235,26 @@ main {
           width: 50%;
           margin: var(--margin-default);
           padding: var(--padding-default);
+
           strong {
             display: block;
             text-transform: uppercase;
             font-family: "Fredericka the Great", cursive;
             color: #a1d0ff;
+          }
+          &.small {
+            bottom: 0;
+            margin: 0;
+            width: 100%;
+            strong {
+              display: block;
+              font-size: 80%;
+              //text-transform: lowercase;
+              white-space: pre;
+              &:after {
+                content: ": ";
+              }
+            }
           }
           a {
             color: var(--link-color);
@@ -255,6 +270,12 @@ main {
         }
         &#project-1 {
           background-image: url(./images/movie.jpg);
+        }
+        &#weather {
+          background-image: url(./images/weather.jpg);
+        }
+        &#workday {
+          background-image: url(./images/workday.png);
         }
         &#react {
           background-image: url(./images/walk.jpg);
