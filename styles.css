@@ -24,39 +24,39 @@
   --margin-larger: calc(var(--margin-default) * 6);
   --primary-background-color: rgba(0, 0, 0, 0.85);
   --link-color: lightblue;
-  --link-external: "❐";
-  --link-phone: "📱";
-  --link-top-of-page: "▲";
-  --link-email: "✉️";
+  --link-external: '❐';
+  --link-phone: '📱';
+  --link-top-of-page: '▲';
+  --link-email: '✉️';
 }
 
 body {
   font-size: var(--font-size-default);
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   background-color: lightgray;
   min-width: 300px;
   margin-bottom: 100%;
   background: url(./images/bg.jpg);
 }
 
-a[target="_blank"] {
+a[target='_blank'] {
   margin-right: var(--margin-large);
 }
 
-a[target="_blank"]::after {
+a[target='_blank']::after {
   content: var(--link-external);
   margin-left: var(--margin-small);
   position: absolute;
   white-space: nowrap;
 }
 
-a[href^="tel:"]::before {
+a[href^='tel:']::before {
   content: var(--link-phone);
   float: left;
   margin-right: var(--margin-small);
 }
 
-a[href^="mailto:"]::before {
+a[href^='mailto:']::before {
   content: var(--link-email);
   float: left;
   margin-right: var(--margin-small);
@@ -138,7 +138,7 @@ header section .status .current div {
 }
 
 header section .status .current div h2 {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: lighter;
   font-size: var(--font-size-smaller);
   min-width: 60px;
@@ -185,7 +185,7 @@ main {
 }
 
 main h2 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 main p,
@@ -279,7 +279,7 @@ main section div.articles article p {
 main section div.articles article p strong {
   display: block;
   text-transform: uppercase;
-  font-family: "Fredericka the Great", cursive;
+  font-family: 'Fredericka the Great', cursive;
   color: #a1d0ff;
 }
 
@@ -296,7 +296,7 @@ main section div.articles article p.small strong {
 }
 
 main section div.articles article p.small strong:after {
-  content: ": ";
+  content: ': ';
 }
 
 main section div.articles article p a {
@@ -308,8 +308,16 @@ main section div.articles article.primary {
   min-height: 600px;
 }
 
+main section div.articles article#tech-blog {
+  background-image: url(./images/tech-blog.png);
+}
+
 main section div.articles article#project-1 {
   background-image: url(./images/movie.jpg);
+}
+
+main section div.articles article#employee-tracker {
+  background-image: url(./images/office-characters.png);
 }
 
 main section div.articles article#weather {
