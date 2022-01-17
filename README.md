@@ -62,4 +62,4 @@ JavaScript is also used to satisfy the acceptance criteria to click the work exa
 
 ## Deployed Application
 
-[https://bravotango.github.io/portfolio/](https://bravotango.github.io/portfolio/)
+[https://bravotango.github.io/Portfolio/](https://bravotango.github.io/Portfolio/)
