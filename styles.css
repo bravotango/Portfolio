@@ -194,6 +194,12 @@ main address {
   margin: var(--margin-default) 0;
 }
 
+main abbr {
+  cursor: pointer;
+  -webkit-text-decoration: overline dashed grey;
+          text-decoration: overline dashed grey;
+}
+
 main section {
   display: -webkit-box;
   display: -ms-flexbox;

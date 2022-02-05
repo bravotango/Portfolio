@@ -173,6 +173,11 @@ main {
     margin: var(--margin-default) 0;
   }
 
+  abbr {
+    cursor: pointer;
+    text-decoration: overline dashed grey;
+  }
+
   section {
     display: flex;
     margin-top: var(--margin-larger);
@@ -199,7 +204,6 @@ main {
       padding-right: var(--padding-default);
       margin-right: var(--margin-default);
     }
-
     div.articles {
       display: flex;
       flex-wrap: wrap;
